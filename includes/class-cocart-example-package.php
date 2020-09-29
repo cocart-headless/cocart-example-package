@@ -38,6 +38,28 @@ final class CoCart_Example_Package {
 	} // END init()
 
 	/**
+	 * Return the version of the package.
+	 *
+	 * @access public
+	 * @static
+	 * @return string
+	 */
+	public static function get_version() {
+		return self::$version;
+	}
+
+	/**
+	 * Return the path to the package.
+	 *
+	 * @access public
+	 * @static
+	 * @return string
+	 */
+	public static function get_path() {
+		return dirname( __DIR__ );
+	}
+
+	/**
 	 * Load the plugin translations if any ready.
 	 *
 	 * Note: the first-loaded translation file overrides any following ones if the same translation is present.

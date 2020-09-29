@@ -9,7 +9,7 @@ This is an example feature plugin package for CoCart Pro. It is setup so that it
 ## Main directories and files
 
 - `cocart-example-package.php` - The main plugin file. ONLY used when using this package as a plugin!
-- `includes/class-cocart-example-package.php` - The package class requires 1 static methods; 
+- `includes/class-cocart-example-package.php` - The package class requires 1 static method; 
   - `init` - Init your package. If it needs to hook into WordPress, do so here.
 
 
