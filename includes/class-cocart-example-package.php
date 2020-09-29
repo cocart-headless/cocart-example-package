@@ -38,6 +38,17 @@ final class CoCart_Example_Package {
 	} // END init()
 
 	/**
+	 * Return the name of the package.
+	 *
+	 * @access public
+	 * @static
+	 * @return string
+	 */
+	public static function get_name() {
+		return 'CoCart Example Package';
+	}
+
+	/**
 	 * Return the version of the package.
 	 *
 	 * @access public
