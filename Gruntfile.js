@@ -33,9 +33,6 @@ module.exports = function(grunt) {
 					cwd: '',
 					domainPath: 'languages',                                  // Where to save the POT file.
 					exclude: [
-						'includes/api/experiments',
-						'includes/api/pro-enhancements',
-						'includes/api/wip',
 						'releases',
 						'node_modules'
 					],
@@ -125,11 +122,8 @@ module.exports = function(grunt) {
 
 		// Bump version numbers (replace with version in package.json)
 		replace: {
-			php: {
-				src: [
-					'<%= pkg.name %>.php',
-					'includes/class-cocart-example-package.php'
-				],
+			container: {
+				src: [ '<%= pkg.name %>.php' ],
 				overwrite: true,
 				replacements: [
 					{
@@ -155,7 +149,13 @@ module.exports = function(grunt) {
 					{
 						from: /Version:.*$/m,
 						to: "Version:     <%= pkg.version %>"
-					},
+					}
+				]
+			},
+			package: {
+				src: [ 'includes/class-<%= pkg.name %>.php' ],
+				overwrite: true,
+				replacements: [
 					{
 						from: /public static \$version = \'.*.'/m,
 						to: "public static $version = '<%= pkg.version %>'"
@@ -163,9 +163,7 @@ module.exports = function(grunt) {
 				]
 			},
 			readme: {
-				src: [
-					'readme.txt',
-				],
+				src: [ 'readme.txt' ],
 				overwrite: true,
 				replacements: [
 					{
@@ -191,9 +189,7 @@ module.exports = function(grunt) {
 				]
 			},
 			stable: {
-				src: [
-					'readme.txt',
-				],
+				src: [ 'readme.txt' ],
 				overwrite: true,
 				replacements: [
 					{
@@ -263,7 +259,7 @@ module.exports = function(grunt) {
 	grunt.registerTask( 'test', [ 'checktextdomain' ]);
 
 	// Update version of plugin.
-	grunt.registerTask( 'version', [ 'replace:php', 'replace:readme' ] );
+	grunt.registerTask( 'version', [ 'replace:container', 'replace:package', 'replace:readme' ] );
 
 	// Update stable version of plugin.
 	grunt.registerTask( 'stable', [ 'replace:stable' ] );
