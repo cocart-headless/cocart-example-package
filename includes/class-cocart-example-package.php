@@ -33,7 +33,7 @@ final class CoCart_Example_Package {
 	 * @static
 	 */
 	public static function init() {
-		// Install CoCart Products upon activation.
+		// Update CoCart add-on counter upon activation.
 		register_activation_hook( COCART_EXAMPLE_PACKAGE_FILE, array( __CLASS__, 'activate_addon' ) );
 
 		// Update CoCart add-on counter upon deactivation.
