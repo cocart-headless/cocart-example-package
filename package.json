@@ -17,11 +17,11 @@
 	"bugs": {
 		"url": "https://github.com/co-cart/cocart-example-package/issues"
 	},
-	"requires": "5.4",
-	"requires_php": "7.0",
-	"tested_up_to": "5.7",
+	"requires": "5.5",
+	"requires_php": "7.3",
+	"tested_up_to": "5.8",
 	"wc_requires": "4.3",
-	"wc_tested_up_to": "5.1",
+	"wc_tested_up_to": "5.7",
 	"license": "GPL-3.0",
 	"copyright": "Copyright (c) 2021, Sébastien Dumont",
 	"description": "Just an example package to be used as a feature plugin.",
@@ -40,7 +40,11 @@
 		"cart",
 		"rest",
 		"rest-api",
-		"JSON"
+		"JSON",
+		"decoupled",
+		"headless",
+		"headless-wordpress",
+		"headless-woocommerce"
 	],
 	"scripts": {
 		"test": "grunt",

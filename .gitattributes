@@ -6,6 +6,7 @@
 
 # Remove files for archives generated using `git archive`.
 /.*                 export-ignore
+composer.*          export-ignore
 Gruntfile.js        export-ignore
 package.json        export-ignore
 package-lock.json   export-ignore
