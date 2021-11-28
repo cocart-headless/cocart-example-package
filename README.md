@@ -1,6 +1,6 @@
 <h1 align="center">CoCart Example Package</h1>
 
-<p align="center"><img src="https://cocart.xyz/wp-content/uploads/2020/08/Logo-1024x534.jpg.webp" alt="CoCart Pro Logo" /></p>
+<p align="center"><img src="https://cocart.xyz/wp-content/uploads/2021/11/cocart-home-default.png.webp" alt="CoCart Logo" /></p>
 
 <br>
 
@@ -17,6 +17,7 @@ This is an example feature plugin package for [CoCart Pro](https://cocart.xyz/pr
 
 Released under [GNU General Public License v3.0](http://www.gnu.org/licenses/gpl-3.0.html).
 
+---
 
 ## CoCart Channels
 
@@ -33,6 +34,7 @@ We have different channels at your disposal where you can find information about
   <li>💌 <strong>Newsletter</strong>: do you want to receive the latest plugin updates and news? Subscribe <a href="https://twitter.com/cocartapi">here.</a></li>
 </ul>
 
+---
 
 ## Credits
 
