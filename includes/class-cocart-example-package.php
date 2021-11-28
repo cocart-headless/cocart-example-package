@@ -14,9 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Main CoCart Example Package class.
  *
- * @class CoCart_Example_Package
+ * @class cocart_example_package
  */
-final class CoCart_Example_Package {
+final class cocart_example_package {
 
 	/**
 	 * Plugin Version
@@ -24,7 +24,7 @@ final class CoCart_Example_Package {
 	 * @access public
 	 * @static
 	 */
-	public static $version = '1.0.1';
+	public static $version = '1.0.2';
 
 	/**
 	 * Initiate CoCart Example Package.
