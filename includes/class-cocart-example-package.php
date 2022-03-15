@@ -7,16 +7,18 @@
  * @license  GPL-2.0+
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+namespace CoCart\ExamplePackage;
+
+ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
 /**
  * Main CoCart Example Package class.
  *
- * @class cocart_example_package
+ * @class CoCart\ExamplePackage\ExampleClass
  */
-final class cocart_example_package {
+final class ExampleClass {
 
 	/**
 	 * Plugin Version
@@ -24,7 +26,7 @@ final class cocart_example_package {
 	 * @access public
 	 * @static
 	 */
-	public static $version = '1.0.2';
+	public static $version = '1.0.3';
 
 	/**
 	 * Initiate CoCart Example Package.

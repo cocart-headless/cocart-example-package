@@ -2,13 +2,13 @@
 /**
  * This file is designed to be used to load as package NOT a WP plugin!
  *
- * @version 1.0.2
+ * @version 1.0.3
  * @package CoCart Example Package
  */
 
 defined( 'ABSPATH' ) || exit;
 
-if ( version_compare( PHP_VERSION, '7.0', '<' ) ) {
+if ( version_compare( PHP_VERSION, '7.3', '<' ) ) {
 	return;
 }
 
@@ -17,7 +17,7 @@ if ( ! defined( 'COCART_EXAMPLE_PACKAGE_FILE' ) ) {
 }
 
 // Include the main CoCart Example Package class.
-if ( ! class_exists( 'cocart_example_package', false ) ) {
+if ( ! class_exists( 'CoCart\ExamplePackage\ExampleClass', false ) ) {
 	include_once( untrailingslashit( plugin_dir_path( COCART_EXAMPLE_PACKAGE_FILE ) ) . '/includes/class-cocart-example-package.php' );
 }
 
@@ -28,7 +28,7 @@ if ( ! class_exists( 'cocart_example_package', false ) ) {
  */
 if ( ! function_exists( 'cocart_example_package' ) ) {
 	function cocart_example_package() {
-		return cocart_example_package::init();
+		return \CoCart\ExamplePackage\ExampleClass::init();
 	}
 
 	cocart_example_package();

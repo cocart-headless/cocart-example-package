@@ -2,23 +2,23 @@
 /*
  * Plugin Name: CoCart Example Package
  * Plugin URI:  https://cocart.xyz
- * Description: Just an example package to be used as a feature plugin.
+ * Description: Just an example package to be used as a feature plugin for CoCart.
  * Author:      Sébastien Dumont
  * Author URI:  https://sebastiendumont.com
- * Version:     1.0.2
+ * Version:     1.0.3
  * Text Domain: cocart-example-package
  * Domain Path: /languages/
- * Requires at least: 5.5
- * Requires PHP: 7.3
- * WC requires at least: 4.3
- * WC tested up to: 5.9
+ * Requires at least: 5.6
+ * Requires PHP: 7.4
+ * WC requires at least: 5.4
+ * WC tested up to: 6.3
  *
  * @package CoCart Example Package
  */
 
 defined( 'ABSPATH' ) || exit;
 
-if ( version_compare( PHP_VERSION, '7.0', '<' ) ) {
+if ( version_compare( PHP_VERSION, '7.3', '<' ) ) {
 	return;
 }
 
@@ -27,7 +27,7 @@ if ( ! defined( 'COCART_EXAMPLE_PACKAGE_FILE' ) ) {
 }
 
 // Include the main CoCart Example Package class.
-if ( ! class_exists( 'cocart_example_package', false ) ) {
+if ( ! class_exists( 'CoCart\ExamplePackage\ExampleClass', false ) ) {
 	include_once( untrailingslashit( plugin_dir_path( COCART_EXAMPLE_PACKAGE_FILE ) ) . '/includes/class-cocart-example-package.php' );
 }
 
@@ -38,7 +38,7 @@ if ( ! class_exists( 'cocart_example_package', false ) ) {
  */
 if ( ! function_exists( 'cocart_example_package' ) ) {
 	function cocart_example_package() {
-		return cocart_example_package::init();
+		return \CoCart\ExamplePackage\ExampleClass::init();
 	}
 
 	cocart_example_package();
