@@ -4,7 +4,7 @@
 
 <br>
 
-This is an example feature plugin package for [CoCart Pro](https://cocart.xyz/pro/?utm_medium=gh&utm_source=github&utm_campaign=readme&utm_content=cocart). It is setup so that it can be installed standalone as a WordPress plugin, or included into CoCart Pro as a Composer Package.
+This is an example feature plugin package for [CoCart](https://cocart.xyz/?utm_medium=gh&utm_source=github&utm_campaign=readme&utm_content=cocart). It is setup so that it can be installed as a standalone WordPress plugin, or included into CoCart as a Composer Package.
 
 ## Main directories and files
 
@@ -23,7 +23,7 @@ Released under [GNU General Public License v3.0](http://www.gnu.org/licenses/gpl
 
 We have different channels at your disposal where you can find information about the CoCart project, discuss it and get involved:
 
-[![Twitter: cocartapi](https://img.shields.io/twitter/follow/cocartapi?style=social)](https://twitter.com/cocartapi) [![CoCart Github Stars](https://img.shields.io/github/stars/co-cart/co-cart?style=social)](https://github.com/co-cart/co-cart)
+[![Twitter: cocartapi](https://img.shields.io/twitter/follow/cocartapi?style=social)](https://twitter.com/cocartapi) [![CoCart GitHub Stars](https://img.shields.io/github/stars/co-cart/co-cart?style=social)](https://github.com/co-cart/co-cart)
 
 <ul>
   <li>📖 <strong>Docs</strong>: this is the place to learn how to use CoCart API. <a href="https://docs.cocart.xyz/#getting-started">Get started!</a></li>
