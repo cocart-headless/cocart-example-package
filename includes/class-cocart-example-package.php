@@ -26,7 +26,7 @@ final class ExampleClass {
 	 * @access public
 	 * @static
 	 */
-	public static $version = '1.0.3';
+	public static $version = '1.0.4';
 
 	/**
 	 * Initiate CoCart Example Package.

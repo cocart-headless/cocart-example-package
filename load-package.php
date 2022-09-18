@@ -2,13 +2,13 @@
 /**
  * This file is designed to be used to load as package NOT a WP plugin!
  *
- * @version 1.0.3
+ * @version 1.0.4
  * @package CoCart Example Package
  */
 
 defined( 'ABSPATH' ) || exit;
 
-if ( version_compare( PHP_VERSION, '7.3', '<' ) ) {
+if ( version_compare( PHP_VERSION, '7.4', '<' ) ) {
 	return;
 }
 
