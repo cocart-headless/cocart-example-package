@@ -5,13 +5,13 @@
  * Description: Just an example package to be used as a feature plugin for CoCart.
  * Author:      Sébastien Dumont
  * Author URI:  https://sebastiendumont.com
- * Version:     1.0.4
+ * Version:     1.0.5
  * Text Domain: cocart-example-package
  * Domain Path: /languages/
  * Requires at least: 5.6
  * Requires PHP: 7.4
  * WC requires at least: 6.4
- * WC tested up to: 6.9
+ * WC tested up to: 7.4
  *
  * @package CoCart Example Package
  */

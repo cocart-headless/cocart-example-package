@@ -1,7 +1,7 @@
 {
 	"title": "CoCart Example Package",
 	"name": "cocart-example-package",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"private": false,
 	"contributors": [
 		"sebd86",
@@ -20,11 +20,11 @@
 	},
 	"requires": "5.6",
 	"requires_php": "7.4",
-	"tested_up_to": "6.0",
+	"tested_up_to": "6.2",
 	"wc_requires": "6.4",
-	"wc_tested_up_to": "6.9",
+	"wc_tested_up_to": "7.4",
 	"license": "GPL-3.0",
-	"copyright": "Copyright (c) 2022, Sébastien Dumont",
+	"copyright": "Copyright (c) 2023, Sébastien Dumont",
 	"description": "Just an example package to be used as a feature plugin for CoCart.",
 	"tags": "",
 	"keywords": [
@@ -57,7 +57,7 @@
 		"packages:update": "npm install -g npm-check-updates & ncu -u & npm update & npm install"
 	},
 	"devDependencies": {
-		"grunt": "1.5.3",
+		"grunt": "1.6.1",
 		"grunt-checktextdomain": "1.0.1",
 		"grunt-contrib-clean": "2.0.1",
 		"grunt-contrib-compress": "2.0.0",

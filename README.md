@@ -9,6 +9,7 @@ This is an example feature plugin package for [CoCart](https://cocart.xyz/?utm_m
 ## Main directories and files
 
 - `cocart-example-package.php` - The main plugin file. ONLY used when using this package as a plugin!
+- `load-package.php` - Same as the main plugin file but without the plugin header. Used when installed into CoCart as a package with composer. [See guide for instructions](https://github.com/co-cart/co-cart/tree/dev/plugins/cocart/packages).
 - `includes/class-cocart-example-package.php` - The package class requires 1 static method; 
   - `init` - Init your package. If it needs to hook into WordPress, do so here.
 

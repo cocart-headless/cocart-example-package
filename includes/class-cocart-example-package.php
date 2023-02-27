@@ -24,23 +24,19 @@ final class ExampleClass {
 	 * Plugin Version
 	 *
 	 * @access public
+	 *
 	 * @static
 	 */
-	public static $version = '1.0.4';
+	public static $version = '1.0.5';
 
 	/**
 	 * Initiate CoCart Example Package.
 	 *
 	 * @access public
+	 *
 	 * @static
 	 */
 	public static function init() {
-		// Update CoCart add-on counter upon activation.
-		register_activation_hook( COCART_EXAMPLE_PACKAGE_FILE, array( __CLASS__, 'activate_addon' ) );
-
-		// Update CoCart add-on counter upon deactivation.
-		register_deactivation_hook( COCART_EXAMPLE_PACKAGE_FILE, array( __CLASS__, 'deactivate_addon' ) );
-
 		// Load translation files.
 		add_action( 'init', array( __CLASS__, 'load_plugin_textdomain' ), 0 );
 	} // END init()
@@ -49,7 +45,9 @@ final class ExampleClass {
 	 * Return the name of the package.
 	 *
 	 * @access public
+	 *
 	 * @static
+	 *
 	 * @return string
 	 */
 	public static function get_name() {
@@ -60,7 +58,9 @@ final class ExampleClass {
 	 * Return the version of the package.
 	 *
 	 * @access public
+	 *
 	 * @static
+	 *
 	 * @return string
 	 */
 	public static function get_version() {
@@ -71,50 +71,14 @@ final class ExampleClass {
 	 * Return the path to the package.
 	 *
 	 * @access public
+	 *
 	 * @static
+	 *
 	 * @return string
 	 */
 	public static function get_path() {
 		return dirname( __DIR__ );
 	}
-
-	/**
-	 * Runs when the plugin is activated.
-	 *
-	 * Adds plugin to list of installed CoCart add-ons.
-	 *
-	 * @access public
-	 */
-	public static function activate_addon() {
-		$addons_installed = get_option( 'cocart_addons_installed', array() );
-
-		$plugin = plugin_basename( COCART_EXAMPLE_PACKAGE_FILE );
-
-		// Check if plugin is already added to list of installed add-ons.
-		if ( ! in_array( $plugin, $addons_installed, true ) ) {
-			array_push( $addons_installed, $plugin );
-			update_option( 'cocart_addons_installed', $addons_installed );
-		}
-	} // END activate_addon()
-
-	/**
-	 * Runs when the plugin is deactivated.
-	 *
-	 * Removes plugin from list of installed CoCart add-ons.
-	 *
-	 * @access public
-	 */
-	public static function deactivate_addon() {
-		$addons_installed = get_option( 'cocart_addons_installed', array() );
-
-		$plugin = plugin_basename( COCART_EXAMPLE_PACKAGE_FILE );
-
-		// Remove plugin from list of installed add-ons.
-		if ( in_array( $plugin, $addons_installed, true ) ) {
-			$addons_installed = array_diff( $addons_installed, array( $plugin ) );
-			update_option( 'cocart_addons_installed', $addons_installed );
-		}
-	} // END deactivate_addon()
 
 	/**
 	 * Load the plugin translations if any ready.
@@ -126,6 +90,7 @@ final class ExampleClass {
 	 *      - WP_LANG_DIR/plugins/cocart-example-package-LOCALE.mo
 	 *
 	 * @access public
+	 *
 	 * @static
 	 */
 	public static function load_plugin_textdomain() {
