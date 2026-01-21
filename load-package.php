@@ -2,7 +2,7 @@
 /**
  * This file is designed to be used to load as package NOT a WP plugin!
  *
- * @version 1.0.5
+ * @version 1.0.6
  * @package CoCart Example Package
  */
 
@@ -14,6 +14,10 @@ if ( version_compare( PHP_VERSION, '7.4', '<' ) ) {
 
 if ( ! defined( 'COCART_EXAMPLE_PACKAGE_FILE' ) ) {
 	define( 'COCART_EXAMPLE_PACKAGE_FILE', __FILE__ );
+}
+
+if ( ! defined( 'COCART_EXAMPLE_PACKAGE_SLUG' ) ) {
+	define( 'COCART_EXAMPLE_PACKAGE_SLUG', 'cocart-example-package' );
 }
 
 // Include the main CoCart Example Package class.

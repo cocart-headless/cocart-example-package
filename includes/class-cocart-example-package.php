@@ -27,7 +27,25 @@ final class ExampleClass {
 	 *
 	 * @static
 	 */
-	public static $version = '1.0.5';
+	public static $version = '1.0.6';
+
+	/**
+	 * Cloning is forbidden.
+	 *
+	 * @access public
+	 */
+	public function __clone() {
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cloning this object is forbidden.', 'cocart-example-package' ), '1.0.6' );
+	} // END __clone()
+
+	/**
+	 * Unserializing instances of this class is forbidden.
+	 *
+	 * @access public
+	 */
+	public function __wakeup() {
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Unserializing instances of this class is forbidden.', 'cocart-example-package' ), '1.0.6' );
+	} // END __wakeup()
 
 	/**
 	 * Initiate CoCart Example Package.
@@ -37,9 +55,33 @@ final class ExampleClass {
 	 * @static
 	 */
 	public static function init() {
+		// Autocorrect plugin slug used so that dependent plugins can be installed/activated.
+		add_filter( 'wp_plugin_dependencies_slug', array( __CLASS__, 'convert_plugin_dependency_slug' ) );
+
 		// Load translation files.
 		add_action( 'init', array( __CLASS__, 'load_plugin_textdomain' ), 0 );
 	} // END init()
+
+	/**
+	 * Converts the plugin slug to the correct slug for the current version.
+	 * This ensures that when the plugin is installed in a different folder name,
+	 * the correct slug is used so that dependent plugins can be installed/activated.
+	 *
+	 * @access public
+	 *
+	 * @static
+	 *
+	 * @param string $slug The plugin slug to convert.
+	 *
+	 * @return string
+	 */
+	public static function convert_plugin_dependency_slug( $slug ) {
+		if ( COCART_EXAMPLE_PACKAGE_SLUG === $slug ) {
+			$slug = dirname( plugin_basename( COCART_EXAMPLE_PACKAGE_FILE ) );
+		}
+
+		return $slug;
+	} // END convert_plugin_dependency_slug()
 
 	/**
 	 * Return the name of the package.
@@ -100,11 +142,11 @@ final class ExampleClass {
 			$locale = is_admin() ? get_user_locale() : get_locale();
 		}
 
-		$locale = apply_filters( 'plugin_locale', $locale, 'cocart-example-package' );
+		$locale = apply_filters( 'plugin_locale', $locale, COCART_EXAMPLE_PACKAGE_SLUG ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
 
-		unload_textdomain( 'cocart-example-package' );
-		load_textdomain( 'cocart-example-package', WP_LANG_DIR . '/cocart-example-package/cocart-example-package-' . $locale . '.mo' );
-		load_plugin_textdomain( 'cocart-example-package', false, plugin_basename( dirname( COCART_EXAMPLE_PACKAGE_FILE ) ) . '/languages' );
+		unload_textdomain( COCART_EXAMPLE_PACKAGE_SLUG );
+		load_textdomain( COCART_EXAMPLE_PACKAGE_SLUG, WP_LANG_DIR . '/' . COCART_EXAMPLE_PACKAGE_SLUG . '/' . COCART_EXAMPLE_PACKAGE_SLUG . '-' . $locale . '.mo' );
+		load_plugin_textdomain( COCART_EXAMPLE_PACKAGE_SLUG, false, plugin_basename( dirname( COCART_EXAMPLE_PACKAGE_FILE ) ) . '/languages' ); // phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound
 	} // END load_plugin_textdomain()
 
 } // END class

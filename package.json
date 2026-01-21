@@ -1,30 +1,30 @@
 {
 	"title": "CoCart Example Package",
 	"name": "cocart-example-package",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"private": false,
 	"contributors": [
 		"sebd86",
 		"cocartforwc"
 	],
-	"author": "Sébastien Dumont",
-	"author_uri": "https://sebastiendumont.com",
-	"homepage": "https://cocart.xyz/",
+	"author": "CoCart Headless, LLC",
+	"author_uri": "https://cocartapi.com",
+	"homepage": "https://cocartapi.com",
 	"main": "Gruntfile.js",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/co-cart/cocart-example-package.git"
+		"url": "https://github.com/cocart-headless/cocart-example-package.git"
 	},
 	"bugs": {
-		"url": "https://github.com/co-cart/cocart-example-package/issues"
+		"url": "https://github.com/cocart-headless/cocart-example-package/issues"
 	},
-	"requires": "5.6",
+	"requires": "6.3",
 	"requires_php": "7.4",
-	"tested_up_to": "6.2",
-	"wc_requires": "6.4",
-	"wc_tested_up_to": "7.4",
+	"tested_up_to": "6.9",
+	"wc_requires": "9.0",
+	"wc_tested_up_to": "10.4",
 	"license": "GPL-3.0",
-	"copyright": "Copyright (c) 2023, Sébastien Dumont",
+	"copyright": "Copyright (c) 2026, CoCart Headless, LLC",
 	"description": "Just an example package to be used as a feature plugin for CoCart.",
 	"tags": "",
 	"keywords": [
@@ -66,12 +66,11 @@
 		"grunt-newer": "1.3.0",
 		"grunt-potomo": "3.5.0",
 		"grunt-text-replace": "0.4.0",
-		"grunt-wp-i18n": "1.0.3",
+		"grunt-wp-i18n": "1.0.4",
 		"load-grunt-tasks": "5.1.0"
 	},
 	"dependencies": {},
 	"engines": {
-		"node": ">=16.14",
-		"npm": ">=6.4.1"
+		"node": ">=20.0.0"
 	}
 }
